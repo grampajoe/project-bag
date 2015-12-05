@@ -4,8 +4,8 @@ machine:
 
 dependencies:
   override:
-    - docker build -t grampajoe/project-bag:latest .
+    - docker build --rm=false -t grampajoe/project-bag:latest .
 
 test:
   override:
-    - docker run -it --rm grampajoe/project-bag:latest rake
+    - docker run -it grampajoe/project-bag:latest rake
