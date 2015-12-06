@@ -1,11 +1,3 @@
 machine:
   services:
     - docker
-
-dependencies:
-  override:
-    - docker build --rm=false -t grampajoe/project-bag:latest .
-
-test:
-  override:
-    - docker run -it grampajoe/project-bag:latest rake
